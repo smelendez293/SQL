@@ -1,0 +1,34 @@
+--Create a store database
+
+
+CREATE TABLE plant_store
+(id INTEGER PRIMARY KEY,
+name TEXT, 
+size INTEGER,
+price REAL,
+Season TEXT);
+
+INSERT INTO plant_store VALUES
+(1, "Calathea", 5, 10.99, "summer");
+INSERT INTO plant_store VALUES(2, "Roses", 10, 19.99, "summer");
+INSERT INTO plant_store VALUES (3, "Poppies", 9, 10.00, "fall");
+INSERT INTO plant_store VALUES (4, "Daisies", 8, 15.00, "spring");
+INSERT INTO plant_store VALUES (5, "Palms", 20, 49.99, "winter");
+INSERT INTO plant_store VALUES (6, "Tulips", 10, 8.99, "spring");
+INSERT INTO plant_store VALUES (7, "Azaleas", 7, 12.99, "Fall");
+INSERT INTO plant_store VALUES (8, "Peonies", 9, 12.00, "spring");
+INSERT INTO plant_store VALUES (9, "Sunflowers", 12, 19.99, "summer");
+INSERT INTO plant_store VALUES (10, "Violets", 7, 15.99, "fall");
+INSERT INTO plant_store VALUES (11, "Carnations", 9, 13.99, "winter");
+INSERT INTO plant_store VALUES (12, "Dahlias", 5, 11.00, "winter");
+INSERT INTO plant_store VALUES (13, "Orchid", 20, 49.99, "winter");
+INSERT INTO plant_store VALUES (14, "Hydrangeas", 9, 17.99, "summer");
+INSERT INTO plant_store VALUES (15, "Iris", 5, 13.99, "spring");
+
+--display the database ordered by price
+SELECT * FROM plant_store
+ORDER BY price desc;
+
+--What is the average price of a plant at this store?
+SELECT AVG(price)
+FROM plant_store;
